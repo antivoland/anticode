@@ -12,6 +12,7 @@
     <modules>
         <module>core</module>
         <module>collections</module>
+        <module>commands</module>
     </modules>
 </project>
 
