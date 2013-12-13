@@ -1,103 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>ru.antivoland</groupId>
-    <artifactId>anticode</artifactId>
+    <groupId>ru.antivoland.anticode</groupId>
+    <artifactId>anticode-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>swc</packaging>
+    <packaging>pom</packaging>
+
     <name>anticode</name>
-    <url>http://antivoland.ru/dev/anticode/</url>
+    <url>https://github.com/antivoland/anticode/</url>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <pom.xml.flexmojos.version>3.8</pom.xml.flexmojos.version>
-        <pom.xml.flexsdk.version>4.6.b.23201</pom.xml.flexsdk.version>
-    </properties>
-
-    <build>
-        <finalName>anticode</finalName>
-        <sourceDirectory>src/main/actionscript</sourceDirectory>
-        <plugins>
-            <plugin>
-                <groupId>org.sonatype.flexmojos</groupId>
-                <artifactId>flexmojos-maven-plugin</artifactId>
-                <version>${pom.xml.flexmojos.version}</version>
-                <extensions>true</extensions>
-
-                <configuration>
-                    <configurationReport>true</configurationReport>
-                    <skipTest>true</skipTest>
-                    <storepass/>
-                    <staticLinkRuntimeSharedLibraries>true</staticLinkRuntimeSharedLibraries>
-                    <optimize>true</optimize>
-                    <debug>${pom.xml.flexcompiler.debug}</debug>
-                    <useNetwork>false</useNetwork>
-                </configuration>
-
-                <dependencies>
-                    <dependency>
-                        <groupId>com.adobe.flex</groupId>
-                        <artifactId>compiler</artifactId>
-                        <version>${pom.xml.flexsdk.version}</version>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.adobe.flex.framework</groupId>
-            <artifactId>flex-framework</artifactId>
-            <version>${pom.xml.flexsdk.version}</version>
-            <type>pom</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.adobe.corelib</groupId>
-            <artifactId>as3corelib</artifactId>
-            <version>1.0</version>
-            <type>swc</type>
-        </dependency>
-    </dependencies>
-
-    <repositories>
-        <!-- flex-framework -->
-        <repository>
-            <id>repository.sonatype.org</id>
-            <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-
-        <!-- com.adobe.corelib:as3corelib -->
-        <repository>
-            <id>artifactory.flexis.ru</id>
-            <url>http://artifactory.flexis.ru:8030/artifactory/flexis-local/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>flex-mojos-plugin</id>
-            <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <modules>
+        <module>core</module>
+    </modules>
 </project>
+
