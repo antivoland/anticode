@@ -5,7 +5,7 @@
     <artifactId>anticode</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>swc</packaging>
-    <name>Anticode</name>
+    <name>anticode</name>
     <url>http://antivoland.ru/dev/anticode/</url>
 
     <properties>
